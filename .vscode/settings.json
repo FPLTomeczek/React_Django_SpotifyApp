@@ -2,6 +2,7 @@
     "python.pythonPath":"C:\\Users\\tomasz.skrzypinski\\Anaconda3\\envs\\spotify\\python.exe",
     "python.terminal.activateEnvironment":true,
     "python.condaPath" : "C:\\Users\\tomasz.skrzypinski\\Anaconda3\\Scripts\\conda.exe",
+    "python.defaultInterpreterPath": "C:\\Users\\tomasz.skrzypinski\\Anaconda3",
     "terminal.integrated.shell.windows" : "C:\\Windows\\System32\\cmd.exe",
     "git.ignoreLimitWarning": true
 }
