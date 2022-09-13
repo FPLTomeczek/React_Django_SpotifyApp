@@ -60,7 +60,7 @@ export default class HomePage extends Component{
             <Route path = "/" element = {this.renderHomePage()} />
             <Route path = "join" element={<RoomJoinPage/>}></Route>
             <Route path = "create" element={<CreateRoomPage/>}></Route>
-            <Route path = "room/:roomCode" element={<Room/>}></Route>
+            <Route path = "room/:roomCode" element={<Room leaveRoomCallback={this.clearRoomCode}/>}></Route>
         </Routes>
     </Router>)
     }

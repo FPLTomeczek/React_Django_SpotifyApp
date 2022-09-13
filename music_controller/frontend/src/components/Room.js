@@ -20,7 +20,16 @@ export default function Room(props) {
         setIsHost(data.is_host);  
     })
     
-
+    leaveButtonPressed() {
+        const requestOptions = {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        };
+        fetch("/api/leave-room", requestOptions).then((_response) => {
+          this.props.leaveRoomCallback();
+          this.props.history.push("/");
+        });
+      }
 
     
     return (
@@ -46,7 +55,7 @@ export default function Room(props) {
                 </Typography>
             </Grid>
             <Grid item xs={12} align="center">
-                <Button color="secondary" variant="contained" to="/" component={Link}>
+                <Button color="secondary" variant="contained" onClick={this.leaveButtonPressed}>
                     Leave
                 </Button>
             </Grid>             
