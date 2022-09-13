@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from "./HomePage";
-
+import CreateRoomPage from "./CreateRoomPage";
+import RoomJoinPage from "./RoomJoinPage";
+import Room from "./Room";
 
 export default class App extends Component{
     constructor(props)
@@ -10,9 +13,14 @@ export default class App extends Component{
     }
 
     render(){
-        return (
-            <HomePage/>
-        );
+        return (<Router>
+            <Routes>
+                <Route path = "/" element = {<h1>This is home page</h1>} />
+                <Route path = "join" element={<RoomJoinPage/>}></Route>
+                <Route path = "create" element={<CreateRoomPage/>}></Route>
+                <Route path = "room/:roomCode" element={<Room/>}></Route>
+            </Routes>
+        </Router>);
     }
 }
 

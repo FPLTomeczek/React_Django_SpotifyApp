@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import {Button, Grid, Typography, TextField, FormHelperText, FormControl, Radio, RadioGroup, FormControlLabel} from "@material-ui/core";
 import {Link} from "react-router-dom";
-import { withRouter } from "./withRouter";
 
-
-class CreateRoomPage extends Component {
+export default class CreateRoomPage extends Component {
     defaultVotes = 2;
   
     constructor(props) {
@@ -42,7 +40,7 @@ class CreateRoomPage extends Component {
       };
       fetch("/api/create-room", requestOptions)
         .then((response) => response.json())
-        .then((data) => this.props.navigate('/room/'+data.code));
+        .then((data) => console.log(data));
     }
   
     render() {
@@ -113,4 +111,3 @@ class CreateRoomPage extends Component {
       );
     }
   }
-  export default withRouter(CreateRoomPage);
