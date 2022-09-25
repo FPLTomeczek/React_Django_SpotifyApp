@@ -31,9 +31,6 @@ export default function Room(props) {
             console.log({showSettings})
 
         })
-        if(showSettings){
-            renderSettings;
-        }
     })
 
     const renderSettings = () => {
@@ -44,7 +41,7 @@ export default function Room(props) {
                 votesToSkip={votesToSkip}
                 guestCanPause={guestCanPause}
                 roomCode={roomCode}
-                updateCallback={null}
+                //updateCallback={null}
               />
             </Grid>
             <Grid item xs={12} align="center">
